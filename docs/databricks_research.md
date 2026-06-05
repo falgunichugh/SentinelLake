@@ -62,6 +62,7 @@ Risk Engine evaluates activity
 Dashboard/Alert generated
 
 system.access.audit contains audit logs. For SentinelLake, this table can be used to detect suspicious user behavior, privilege changes, and unusual activity patterns.
+
 system.lakeflow.jobs and system.lakeflow.job_run_timeline can track job execution. 
 
 ### Potential Data Sources for SentinelLake MVP
