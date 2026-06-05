@@ -197,4 +197,6 @@ Instead, it can leverage Databricks metadata and monitoring sources, including:
 - system.lakeflow.jobs
 - system.lakeflow.job_run_timeline
 - Unity Catalog
+
+
 These sources provide sufficient information to monitor user activity, data access patterns, permission changes, and pipeline execution risks without requiring access to sensitive client data.
