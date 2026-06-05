@@ -1,0 +1,58 @@
+# SentinelLake MVP Design
+
+## Objective
+Build a Databricks Security & Observability Accelerator capable of monitoring user access activities and pipeline risks using Databricks metadata sources.
+
+## Inputs
+### system.access.audit
+Used for:
+- User activity monitoring
+- Access tracking
+- Permission changes
+- Authentication events
+
+### system.lakeflow.jobs
+Used for:
+- Job monitoring
+- Workflow status tracking
+
+### system.lakeflow.job_run_timeline
+Used for:
+- Failure detection
+- Execution duration analysis
+
+### Unity Catalog
+Used for:
+- Permission information
+- Sensitive dataset identification
+- Governance context
+
+## Processing Layer
+
+### Risk Scoring Engine
+Rules:
+- After-hours access → +20
+- Sensitive dataset access → +25
+- Permission change → +15
+- Job failure → +10
+- Large export → +30
+
+## Outputs
+### Incident Records
+Example:
+User: abc@company.com
+Risk Score: 85
+Severity: Critical
+
+### Dashboard
+Displays:
+- High-risk users
+- Recent incidents
+- Job failures
+- Risk trends
+
+## Future Enhancements
+- AI Incident Summaries
+- Advanced Anomaly Detection
+- Real-Time Alerting
+- Data Quality Monitoring
